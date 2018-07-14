@@ -1,0 +1,18 @@
+<div class="appLogo">Dobrodošli na eDnevnik portal!</div>
+<form class="formaZaLog">
+        <div class="input-group" style="width: 80%; margin-left: 10%; margin-top:5%;">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input id="email" type="text" class="form-control" name="email" placeholder="Korisničko ime">
+        </div>
+        <div class="input-group" style="width: 80%; margin-left: 10%; margin-top:5%;">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+          <input id="password" type="password" class="form-control" name="password" placeholder="Lozinka">
+        </div>
+        <select id="Role" class="inputLogIn" placeholder="Uloguj se kao:">
+                <option value="0">Ucenik</option>
+                <option value="1">Roditelj</option>
+                <option value="2">Profesor</option>
+                <option value="3">Administrator</option>
+            </select>
+        <button (click)="logInClick()" class="btnLog btn-primary">Log in</button>
+</form>
