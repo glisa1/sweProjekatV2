@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Inject} from '@angular/core';
+import { ContentComponentComponent } from '../content-component/content-component.component';
 
 /** @title Sidenav open & close behavior */
 @Component({
@@ -8,9 +9,13 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MenuComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(ContentComponentComponent) private parent:ContentComponentComponent) { }
 
   ngOnInit() {
+  }
+
+  public logOut(){
+    this.parent.parent.logInTest = true;
   }
 
 }

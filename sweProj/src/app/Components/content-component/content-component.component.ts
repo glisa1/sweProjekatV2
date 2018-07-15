@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-content-component',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-component.component.css']
 })
 export class ContentComponentComponent implements OnInit {
-
-  constructor() { }
+  public testLog:boolean;
+  constructor(@Inject(AppComponent) public parent:AppComponent) {}
 
   ngOnInit() {
   }

@@ -9,8 +9,15 @@
 
 .sidenav-content{
   width: 300px;
+  background-color: blue;
 }
 
 .menuIcon{
   cursor: pointer;
+}
+
+.menuBtn{
+  width: 100%;
+  float: left;
+  height: 80px;
 }
