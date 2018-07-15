@@ -1,3 +1,2 @@
-<app-log-in-component>
-
-</app-log-in-component>
+<app-content-component *ngIf="!logInTest"></app-content-component>
+<app-log-in-component *ngIf="logInTest"></app-log-in-component>
