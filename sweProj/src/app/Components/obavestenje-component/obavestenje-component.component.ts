@@ -8,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class ObavestenjeComponentComponent implements OnInit {
 
   constructor() { }
-
+  public obavestenjaList = [
+  {
+    "Autor": "Miki",
+    "Tekst": "Miki miki veliki",
+    "Datum": "12.31.41."
+  },
+  {
+    "Autor": "Sele",
+    "Tekst": "Oni vele",
+    "Datum": "12.31.41."
+  }];
   ngOnInit() {
   }
 

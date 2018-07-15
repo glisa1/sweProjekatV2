@@ -1,5 +1,5 @@
 import {Component, OnInit, Inject} from '@angular/core';
-import { ContentComponentComponent } from '../content-component/content-component.component';
+import { AppComponent } from '../../app.component';
 
 /** @title Sidenav open & close behavior */
 @Component({
@@ -9,13 +9,13 @@ import { ContentComponentComponent } from '../content-component/content-componen
 })
 export class MenuComponentComponent implements OnInit {
 
-  constructor(@Inject(ContentComponentComponent) private parent:ContentComponentComponent) { }
+  constructor(@Inject(AppComponent) private parent:AppComponent) { }
 
   ngOnInit() {
   }
 
   public logOut(){
-    this.parent.parent.logInTest = true;
+    this.parent.logInTest = true;
   }
 
 }

@@ -1,0 +1,18 @@
+.obavestenjeContainter{
+    border: 1px black solid;
+    width: 80%;
+    background-color: gray;
+    position: relative;
+}
+
+.obavestenjeAutor{
+    border-bottom: 1px black solid;
+}
+
+.obavestenjeTekst{
+    border-bottom: 1px black solid;
+}
+
+.obavestenjeDate{
+    user-select: none;
+}
