@@ -3,16 +3,23 @@
     width: 80%;
     background-color: gray;
     position: relative;
+    margin-top: 5%;
+    text-align: center;
 }
 
-.obavestenjeAutor{
-    border-bottom: 1px black solid;
+/*.fieldContainer{
+    float: left;
+}*/
+
+/*.textField{
+    height: 100%;
+}*/
+
+.obavestenjeAutor, .obavestenjeTekst, .obavestenjeTema{
+    border-bottom: 1px solid black;
 }
 
-.obavestenjeTekst{
-    border-bottom: 1px black solid;
-}
-
-.obavestenjeDate{
-    user-select: none;
+.iconContainer{
+    margin-left: 2%;
+    width: 5%;
 }

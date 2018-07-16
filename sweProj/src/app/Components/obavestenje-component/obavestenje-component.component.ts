@@ -11,11 +11,13 @@ export class ObavestenjeComponentComponent implements OnInit {
   public obavestenjaList = [
   {
     "Autor": "Miki",
-    "Tekst": "Miki miki veliki",
+    "Tema" : "O'm'kiju",
+    "Tekst": "Miki miki veliki gde si da si miki doso si tako da si tu bez obzira na to sto mislis da nisi iako mislis da si mali veliki nisi jer biti veliki znati ne moci proci kroz neka mala vrata ali ako ne nadjes mala vrata onda si uvek mali",
     "Datum": "12.31.41."
   },
   {
     "Autor": "Sele",
+    "Tema" : "Opet",
     "Tekst": "Oni vele",
     "Datum": "12.31.41."
   }];

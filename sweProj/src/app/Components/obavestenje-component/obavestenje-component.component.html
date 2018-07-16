@@ -1,5 +1,26 @@
 <div *ngFor="let x of obavestenjaList" class="obavestenjeContainter">
-    <div class="obavestenjeAutor">{{ x.Autor }}</div>
-    <div class="obavestenjeTekst">{{ x.Tekst }}</div>
-    <div class="obavestenjeDate">{{ x.Datum }}</div>
-</div>
+    <div class="obavestenjeAutor">
+        <i class="material-icons">
+            assignment_ind
+        </i>
+        <div>{{ x.Autor }}</div>
+    </div>
+    <div class="obavestenjeTema">
+        <i class="material-icons">
+                assignment_ind
+            </i>
+            <div>{{ x.Tema }}</div>
+    </div>
+    <div class="obavestenjeTekst">
+        <i class="material-icons">
+            description
+        </i>
+        <div>{{ x.Tekst }}</div>
+    </div>
+    <div class="obavestenjeDate">
+        <i class="material-icons">
+            access_time
+        </i>
+        <div>{{ x.Datum }}</div>
+    </div>
+</div> 
