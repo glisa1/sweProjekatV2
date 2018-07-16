@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-desna-strana-component',
@@ -7,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesnaStranaComponentComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(@Inject(AppComponent) private parent:AppComponent) { }
+  public rang:number = this.parent.userRang; //koristiti za prikazivanje raznih komponenti preko ngif-a
   ngOnInit() {
   }
 

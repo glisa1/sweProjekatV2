@@ -1,0 +1,23 @@
+<div class="profileDataContent" *ngIf="!editTest">
+  <mat-list>
+    <mat-list-item><div class="textSite">Korisnicko ime:</div>
+      <div class="dataSite">{{ profileData.Username }}</div></mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><div class="textSite">Ime:</div>
+     <div class="dataSite">{{ profileData.Ime }}</div></mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><div class="textSite">Prezime:</div>
+     <div class="dataSite">{{ profileData.Prezime }}</div></mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><div class="textSite">Adresa:</div>
+     <div class="dataSite">{{ profileData.Adresa }}</div></mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><div class="textSite">Datum rodjenja:</div>
+     <div class="dataSite">{{ profileData.Datum_rodjenja }}</div></mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><div class="textSite">Rang naloga:</div>
+     <div class="dataSite">{{ profileData.RangProfila }}</div></mat-list-item>
+  </mat-list>
+  <button mat-button (click)="editData()">Izmeni podatke</button>
+</div>
+<app-izmena-profila-user *ngIf="editTest"></app-izmena-profila-user>

@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialClass } from './material';
 import { DesnaStranaComponentComponent } from './Components/desna-strana-component/desna-strana-component.component';
 import { ObavestenjeComponentComponent } from './Components/obavestenje-component/obavestenje-component.component';
+import { ProfileViewComponent } from './Components/profile-view/profile-view.component';
+import { IzmenaProfilaUserComponent } from './Components/izmena-profila-user/izmena-profila-user.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ObavestenjeComponentComponent } from './Components/obavestenje-componen
     ContentComponentComponent,
     MenuComponentComponent,
     DesnaStranaComponentComponent,
-    ObavestenjeComponentComponent
+    ObavestenjeComponentComponent,
+    ProfileViewComponent,
+    IzmenaProfilaUserComponent
   ],
   imports: [
     BrowserModule,

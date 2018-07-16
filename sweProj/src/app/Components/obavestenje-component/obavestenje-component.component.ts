@@ -20,6 +20,12 @@ export class ObavestenjeComponentComponent implements OnInit {
     "Tema" : "Opet",
     "Tekst": "Oni vele",
     "Datum": "12.31.41."
+  },
+  {
+    "Autor": "Kele",
+    "Tema" : "Sutra",
+    "Tekst": "Oni zele",
+    "Datum": "12.31.41."
   }];
   ngOnInit() {
   }
