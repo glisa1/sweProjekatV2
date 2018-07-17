@@ -8,6 +8,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
     imports: 
@@ -20,7 +22,9 @@ import { MatInputModule } from '@angular/material/input';
         MatListModule,
         MatFormFieldModule,
         MatSelectModule,
-        MatInputModule
+        MatInputModule,
+        MatExpansionModule,
+        MatDialogModule
     ],
     exports: 
     [
@@ -32,7 +36,9 @@ import { MatInputModule } from '@angular/material/input';
         MatListModule,
         MatFormFieldModule,
         MatSelectModule,
-        MatInputModule
+        MatInputModule,
+        MatExpansionModule,
+        MatDialogModule
     ],
 })
 export class MaterialClass { }

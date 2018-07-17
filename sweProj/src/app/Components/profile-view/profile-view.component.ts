@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { DesnaStranaComponentComponent } from '../desna-strana-component/desna-strana-component.component';
 
 @Component({
   selector: 'app-profile-view',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(DesnaStranaComponentComponent) private parent:DesnaStranaComponentComponent) { }
+  public rang:number = this.parent.rang;
   public editTest:boolean = false;
   public profileData = {
     "Username": "Vlaxy",

@@ -1,0 +1,20 @@
+<div class="mainField" *ngIf="showForum">
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let tema of teme">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ tema.Naziv }}
+            </mat-panel-title>
+            <mat-panel-description id="opis">
+              Povecajte za vise informacija
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>Autor: <p class="font">{{ tema.Autor }}</p></div>
+          <div>Datum postavljanja: <p class="font">{{ tema.Datum }}</p></div>
+          <div>Broj odgovora: <p class="font">{{ tema.BrOdg }}</p></div>
+          <button (click)="biraj(tema.id)" mat-raised-button color="primary">Pogledaj</button>
+        </mat-expansion-panel>
+      </mat-accordion>
+</div>
+<button mat-raised-button class="btnNew" color="primary" *ngIf="showForum">Pokrenite novu temu</button>
+<app-forum-thread-view *ngIf="!showForum"></app-forum-thread-view>

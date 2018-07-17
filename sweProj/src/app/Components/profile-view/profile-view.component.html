@@ -18,6 +18,8 @@
     <mat-list-item><div class="textSite">Rang naloga:</div>
      <div class="dataSite">{{ profileData.RangProfila }}</div></mat-list-item>
   </mat-list>
-  <button mat-button (click)="editData()">Izmeni podatke</button>
+</div>
+<div class="btnContainer" *ngIf="!editTest && rang!=0">
+<button mat-raised-button (click)="editData()" color="primary">Izmeni podatke</button>
 </div>
 <app-izmena-profila-user *ngIf="editTest"></app-izmena-profila-user>

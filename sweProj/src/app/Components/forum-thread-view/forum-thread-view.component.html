@@ -1,0 +1,21 @@
+<div class="mainField">
+    <p id="mainFont">{{ tema.Naslov }}</p>
+    <mat-divider></mat-divider>
+    <p class="font">{{ tema.Autor }}</p>
+    <mat-divider></mat-divider>
+    <p class="font">{{ tema.Tekst }}</p>
+    <p class="font">{{ tema.Datum }}</p>
+</div>
+<div class="odgovoriField">
+  <div class="odgField" *ngFor="let odg of odgovori">
+      <p class="font">{{ odg.Autor }}</p>
+      <mat-divider></mat-divider>
+      <p class="font">{{ odg.Tekst }}</p>
+      <mat-divider></mat-divider>
+      <p class="font">{{ odg.Datum }}</p>
+  </div>
+</div>
+<div class="btnField">
+    <button mat-raised-button (click)="back()" color="primary">Nazad</button>
+    <button mat-raised-button id="lastBtn" color="primary" (click)="openDialog()">Odgovorite</button>
+</div>

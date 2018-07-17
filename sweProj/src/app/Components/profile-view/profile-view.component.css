@@ -11,6 +11,12 @@
     width: 50%;
 }
 
+.btnContainer{
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 60%;
+}
+
 .dataSite{
     font-size: 20px;
     text-align: right;

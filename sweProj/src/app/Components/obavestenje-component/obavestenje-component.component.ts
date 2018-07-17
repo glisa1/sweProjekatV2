@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { DesnaStranaComponentComponent } from '../desna-strana-component/desna-strana-component.component';
 
 @Component({
   selector: 'app-obavestenje-component',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ObavestenjeComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(DesnaStranaComponentComponent) private parent:DesnaStranaComponentComponent) { }
+  public novoObavestenjeTest:boolean = false;
+  public rang:number = this.parent.rang;
+  public novoObavestenje(){
+    this.novoObavestenjeTest = !this.novoObavestenjeTest;
+  }
   public obavestenjaList = [
   {
     "Autor": "Miki",
@@ -19,6 +25,12 @@ export class ObavestenjeComponentComponent implements OnInit {
     "Autor": "Sele",
     "Tema" : "Opet",
     "Tekst": "Oni vele",
+    "Datum": "12.31.41."
+  },
+  {
+    "Autor": "Kele",
+    "Tema" : "Sutra",
+    "Tekst": "Oni zele",
     "Datum": "12.31.41."
   },
   {
