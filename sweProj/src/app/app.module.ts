@@ -15,6 +15,8 @@ import { NovoObavestenjeComponent } from './Components/novo-obavestenje/novo-oba
 import { ForumComponent } from './Components/forum/forum.component';
 import { ForumThreadViewComponent } from './Components/forum-thread-view/forum-thread-view.component';
 import { DialogThreadAnswerComponent } from './Components/dialog-thread-answer/dialog-thread-answer.component';
+import { NewForumThreadComponent } from './Components/new-forum-thread/new-forum-thread.component';
+import { PregledDeceRoditeljComponent } from './Components/pregled-dece-roditelj/pregled-dece-roditelj.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,17 @@ import { DialogThreadAnswerComponent } from './Components/dialog-thread-answer/d
     NovoObavestenjeComponent,
     ForumComponent,
     ForumThreadViewComponent,
-    DialogThreadAnswerComponent
+    DialogThreadAnswerComponent,
+    NewForumThreadComponent,
+    PregledDeceRoditeljComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialClass
+  ],
+  entryComponents: [
+    DialogThreadAnswerComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

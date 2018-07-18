@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForumComponent implements OnInit {
   panelOpenState = false;
-  showForum = true;
+  showForum = 0;
+
+  public newThread(){
+    this.showForum=2;
+  }
+
   constructor() { }
   public teme = 
   [
@@ -64,7 +69,7 @@ export class ForumComponent implements OnInit {
 
   public biraj(arg:number){ //funkcija ima id teme sa foruma, 
     console.log(arg);       //sve sto treba je da prikaze tu temu sa njenim odgovorima
-    this.showForum = false;
+    this.showForum = 1;
   }
 
   ngOnInit() {

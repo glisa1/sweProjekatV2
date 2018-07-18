@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-dialog-thread-answer',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DialogThreadAnswerComponent implements OnInit {
 
-  constructor() { }
+  constructor(public DialogRef: MatDialogRef<DialogThreadAnswerComponent>) { }
+
+  public cancel() {
+    this.DialogRef.close('Cancel');
+  }
+
+  public answer() {
+    this.DialogRef.close('Answer');
+  }
 
   ngOnInit() {
   }

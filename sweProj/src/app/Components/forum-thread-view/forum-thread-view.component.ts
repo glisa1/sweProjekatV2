@@ -24,7 +24,7 @@ export class ForumThreadViewComponent implements OnInit {
   }
 
   public back(){
-    this.parent.showForum = true;
+    this.parent.showForum = 0;
   }
 
   public tema=

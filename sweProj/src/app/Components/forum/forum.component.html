@@ -1,4 +1,4 @@
-<div class="mainField" *ngIf="showForum">
+<div class="mainField" *ngIf="showForum==0">
     <mat-accordion>
         <mat-expansion-panel *ngFor="let tema of teme">
           <mat-expansion-panel-header>
@@ -16,5 +16,6 @@
         </mat-expansion-panel>
       </mat-accordion>
 </div>
-<button mat-raised-button class="btnNew" color="primary" *ngIf="showForum">Pokrenite novu temu</button>
-<app-forum-thread-view *ngIf="!showForum"></app-forum-thread-view>
+<button mat-raised-button class="btnNew" (click)="newThread()" color="primary" *ngIf="showForum==0">Pokrenite novu temu</button>
+<app-new-forum-thread *ngIf="showForum==2"></app-new-forum-thread>
+<app-forum-thread-view *ngIf="showForum==1"></app-forum-thread-view>
