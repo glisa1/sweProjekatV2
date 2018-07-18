@@ -17,6 +17,9 @@ import { ForumThreadViewComponent } from './Components/forum-thread-view/forum-t
 import { DialogThreadAnswerComponent } from './Components/dialog-thread-answer/dialog-thread-answer.component';
 import { NewForumThreadComponent } from './Components/new-forum-thread/new-forum-thread.component';
 import { PregledDeceRoditeljComponent } from './Components/pregled-dece-roditelj/pregled-dece-roditelj.component';
+import { DetePregledComponent } from './Components/dete-pregled/dete-pregled.component';
+import { OcenePregledComponent } from './Components/ocene-pregled/ocene-pregled.component';
+import { NapomeneIzostanciPregledComponent } from './Components/napomene-izostanci-pregled/napomene-izostanci-pregled.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { PregledDeceRoditeljComponent } from './Components/pregled-dece-roditelj
     ForumThreadViewComponent,
     DialogThreadAnswerComponent,
     NewForumThreadComponent,
-    PregledDeceRoditeljComponent
+    PregledDeceRoditeljComponent,
+    DetePregledComponent,
+    OcenePregledComponent,
+    NapomeneIzostanciPregledComponent
   ],
   imports: [
     BrowserModule,
