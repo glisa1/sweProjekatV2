@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OcenePregledComponent } from './ocene-pregled.component';
+import { PregledIzostanakaComponent } from './pregled-izostanaka.component';
 
-describe('OcenePregledComponent', () => {
-  let component: OcenePregledComponent;
-  let fixture: ComponentFixture<OcenePregledComponent>;
+describe('PregledIzostanakaComponent', () => {
+  let component: PregledIzostanakaComponent;
+  let fixture: ComponentFixture<PregledIzostanakaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OcenePregledComponent ]
+      declarations: [ PregledIzostanakaComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OcenePregledComponent);
+    fixture = TestBed.createComponent(PregledIzostanakaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,64 @@
+<!-- Tabla za izostanke --> <!--
+<mat-table [dataSource]="izostanci" class="mat-elevation-z8">
+  
+  <ng-container matColumnDef="Datum">
+    <mat-header-cell *matHeaderCellDef> Datum izostanka </mat-header-cell>
+    <mat-cell *matCellDef="let izostanci"> {{ izostanci.Datum }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Opravdan">
+    <mat-header-cell *matHeaderCellDef> Da li je opravdan </mat-header-cell>
+    <mat-cell *matCellDef="let izostanci"> {{ izostanci.Opravdan }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Predmet">
+    <mat-header-cell *matHeaderCellDef> Napisan na casu iz </mat-header-cell>
+    <mat-cell *matCellDef="let izostanci"> {{ izostanci.Predmet }} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumnsIzo"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
+<!-- Tabla za napomene --> <!--
+<mat-table [dataSource]="napomene" class="mat-elevation-z8">
+  
+  <ng-container matColumnDef="Datum">
+    <mat-header-cell *matHeaderCellDef> Datum napomene </mat-header-cell>
+    <mat-cell *matCellDef="let napomene"> {{ napomene.Datum }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Razlog">
+    <mat-header-cell *matHeaderCellDef> Razlog napomene </mat-header-cell>
+    <mat-cell *matCellDef="let napomene"> {{ napomene.Razlog }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Predmet">
+    <mat-header-cell *matHeaderCellDef> Napisana na casu iz </mat-header-cell>
+    <mat-cell *matCellDef="let napomene"> {{ napomene.Predmet }} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumnsNap"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table> -->
+
+<table mat-table [dataSource]="izostanci" class="mat-elevation-z8">
+    
+  <ng-container matColumnDef="Datum">
+    <th mat-header-cell *matHeaderCellDef> Datum izostanka </th>
+    <td mat-cell *matCellDef="let izostanci"> {{ izostanci.Datum }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Opravdan">
+    <th mat-header-cell *matHeaderCellDef> Da li je opravdan </th>
+    <td mat-cell *matCellDef="let izostanci"> {{ izostanci.Opravdan }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Predmet">
+    <th mat-header-cell *matHeaderCellDef> Zabelezen na predmetu </th>
+    <td mat-cell *matCellDef="let izostanci"> {{ izostanci.Predmet }} </td>
+  </ng-container>
+  
+  <tr mat-header-row *matHeaderRowDef="displayedColumnsIzo"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

@@ -18,8 +18,8 @@ import { DialogThreadAnswerComponent } from './Components/dialog-thread-answer/d
 import { NewForumThreadComponent } from './Components/new-forum-thread/new-forum-thread.component';
 import { PregledDeceRoditeljComponent } from './Components/pregled-dece-roditelj/pregled-dece-roditelj.component';
 import { DetePregledComponent } from './Components/dete-pregled/dete-pregled.component';
-import { OcenePregledComponent } from './Components/ocene-pregled/ocene-pregled.component';
-import { NapomeneIzostanciPregledComponent } from './Components/napomene-izostanci-pregled/napomene-izostanci-pregled.component';
+import { PregledOcenaComponent } from './Components/pregled-ocena/pregled-ocena.component';
+import { PregledIzostanakaComponent } from './Components/pregled-izostanaka/pregled-izostanaka.component';
 
 @NgModule({
   declarations: [
@@ -38,8 +38,8 @@ import { NapomeneIzostanciPregledComponent } from './Components/napomene-izostan
     NewForumThreadComponent,
     PregledDeceRoditeljComponent,
     DetePregledComponent,
-    OcenePregledComponent,
-    NapomeneIzostanciPregledComponent
+    PregledOcenaComponent,
+    PregledIzostanakaComponent
   ],
   imports: [
     BrowserModule,

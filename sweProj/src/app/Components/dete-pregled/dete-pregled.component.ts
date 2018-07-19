@@ -18,13 +18,13 @@ export class DetePregledComponent implements OnInit {
   }
 
   public oceneShow(){
-    this.showCard = false;
-    this.oceneTest = true;
+    this.showCard = !this.showCard;
+    this.oceneTest = !this.oceneTest;
   }
 
   public napomeneShow(){
-    this.showCard = false;
-    this.napomeneTest = true;
+    this.showCard = !this.showCard;
+    this.napomeneTest = !this.napomeneTest;
   }
 
   ngOnInit() {

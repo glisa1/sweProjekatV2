@@ -13,7 +13,7 @@ export class PregledDeceRoditeljComponent implements OnInit {
   public childId:number = null;
   public biraj(arg:number){
     this.childId = arg;
-    console.log(this.childId); //f-ja ima id deteta sa njime moze da vuce iz baze sve potrebne
+    //console.log(this.childId); //f-ja ima id deteta sa njime moze da vuce iz baze sve potrebne
     this.showChildren = false;  //podatke za pregled odredjenog deteta
   }
 
