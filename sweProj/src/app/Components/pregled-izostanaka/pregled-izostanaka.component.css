@@ -2,18 +2,34 @@ table {
     width: 100%;
   }
 
-.mat-elevation-z8{
+.upperTable, .lowerTable{
     width: 70%;
-    max-height: 35%;
+    max-height: 250px;
     overflow: auto;
     margin-top: 5%;
     user-select: none;
 }
 
-.mat-elevation-z8{
-    width: 70%;
-    margin-top: 5%;
-    max-height: 35%;
-    overflow: auto;
-    user-select: none;
+.lowerTable{
+    margin-top: 3%;
+}
+
+#btnBack{
+    margin-top:3%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }

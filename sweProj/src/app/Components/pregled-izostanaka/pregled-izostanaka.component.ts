@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { DetePregledComponent } from '../dete-pregled/dete-pregled.component';
 
 @Component({
   selector: 'app-pregled-izostanaka',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PregledIzostanakaComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(DetePregledComponent)private parent:DetePregledComponent) { }
+
+  public back(){
+    this.parent.napomeneShow();
+  }
 
   displayedColumnsIzo: string[] = ['Datum', 'Opravdan', 'Predmet'];
   displayedColumnsNap: string[] = ['Datum', 'Razlog', 'Predmet'];
@@ -21,6 +26,26 @@ export class PregledIzostanakaComponent implements OnInit {
       Datum: "12.02.2015.",
       Razlog: "Neprikladno ponasanje",
       Predmet: "Matematika"
+    },
+    {
+      Datum: "12.02.2015.",
+      Razlog: "Neprikladno ponasanje",
+      Predmet: "Hemija"
+    },
+    {
+      Datum: "12.02.2015.",
+      Razlog: "Neprikladno ponasanje",
+      Predmet: "Hemija"
+    },
+    {
+      Datum: "12.02.2015.",
+      Razlog: "Neprikladno ponasanje",
+      Predmet: "Hemija"
+    },
+    {
+      Datum: "12.02.2015.",
+      Razlog: "Neprikladno ponasanje",
+      Predmet: "Hemija"
     },
     {
       Datum: "12.02.2015.",
