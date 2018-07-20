@@ -20,6 +20,7 @@ import { PregledDeceRoditeljComponent } from './Components/pregled-dece-roditelj
 import { DetePregledComponent } from './Components/dete-pregled/dete-pregled.component';
 import { PregledOcenaComponent } from './Components/pregled-ocena/pregled-ocena.component';
 import { PregledIzostanakaComponent } from './Components/pregled-izostanaka/pregled-izostanaka.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { PregledIzostanakaComponent } from './Components/pregled-izostanaka/preg
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialClass
+    MaterialClass,
+    FormsModule
   ],
   entryComponents: [
     DialogThreadAnswerComponent

@@ -1,41 +1,40 @@
-.formaZaLog {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
+  .inputField{
+    width: 70%;
+    margin-left: 15%;
+    float: left;
+  }
+
+  #logInBtn{
+    float: left;
+  }
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+
     margin-left: 30%;
     margin-bottom: 3%;
     float: left;
     margin-top: 2%;
-    background-color: rgb(12, 50, 112);
-    border-radius: 30px;
+    background-color: white;
+    width: 40%;
   }
   
+  /*.example-container > * {
+    width: 100%;
+  }*/
+  
+  .i{
+    float: left;
+  }
+
   .appLogo{
-    margin-left: 29%;
+    margin-left: 30%;
     float: left;
     width: 50%;
     margin-top: 5%;
     height: 125px;
     font-size: 40px;
     font-style: italic;
-    color: blue;
-  }
-  
-  .inputLogIn {
-    width: 80%;
-    margin-top: 5%;
-    margin-left: 10%;
-    float: left;
-  }
-  
-  .btnLog{
-    margin-left: 45%;
-    margin-top: 3%;
-    margin-bottom: 5%;
-    border-radius: 25px;
-    background-color: rgb(12, 50, 112);
-  }
-  
-  .btnLog:hover{
-    background-color: cadetblue;
+    color: white;
   }
