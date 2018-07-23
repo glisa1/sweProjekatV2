@@ -21,6 +21,10 @@ import { DetePregledComponent } from './Components/dete-pregled/dete-pregled.com
 import { PregledOcenaComponent } from './Components/pregled-ocena/pregled-ocena.component';
 import { PregledIzostanakaComponent } from './Components/pregled-izostanaka/pregled-izostanaka.component';
 import { FormsModule } from '@angular/forms';
+import { UpisOcenaProfesorComponent } from './Components/upis-ocena-profesor/upis-ocena-profesor.component';
+import { ListaOdeljenjaComponent } from './Components/lista-odeljenja/lista-odeljenja.component';
+import { ListaUcenikaComponent } from './Components/lista-ucenika/lista-ucenika.component';
+import { ProfesorUpisOceneNapomeneIzostankaComponent } from './Components/profesor-upis-ocene-napomene-izostanka/profesor-upis-ocene-napomene-izostanka.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,11 @@ import { FormsModule } from '@angular/forms';
     PregledDeceRoditeljComponent,
     DetePregledComponent,
     PregledOcenaComponent,
-    PregledIzostanakaComponent
+    PregledIzostanakaComponent,
+    UpisOcenaProfesorComponent,
+    ListaOdeljenjaComponent,
+    ListaUcenikaComponent,
+    ProfesorUpisOceneNapomeneIzostankaComponent
   ],
   imports: [
     BrowserModule,

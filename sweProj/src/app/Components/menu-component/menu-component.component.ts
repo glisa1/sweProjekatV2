@@ -11,11 +11,13 @@ export class MenuComponentComponent implements OnInit {
 
   constructor(@Inject(AppComponent) private parent:AppComponent) { }
 
+  private rangUsera:number = this.parent.userRang;
   ngOnInit() {
   }
 
   public logOut(){
     this.parent.logInTest = true;
+    this.parent.changeView(0);
   }
 
 }

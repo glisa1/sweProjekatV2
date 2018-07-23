@@ -1,4 +1,5 @@
-<!-- <app-obavestenje-component></app-obavestenje-component> -->
-<!-- <app-profile-view></app-profile-view> -->
-<!-- <app-forum></app-forum> -->
-<app-pregled-dece-roditelj></app-pregled-dece-roditelj>
+<app-obavestenje-component *ngIf="parent.showTest[0]"></app-obavestenje-component>
+<app-profile-view *ngIf="parent.showTest[1]"></app-profile-view>
+<app-forum *ngIf="parent.showTest[4] && rang!=0"></app-forum>
+<app-pregled-dece-roditelj *ngIf="parent.showTest[3] && rang==1"></app-pregled-dece-roditelj>
+<app-upis-ocena-profesor *ngIf="parent.showTest[5]"></app-upis-ocena-profesor>

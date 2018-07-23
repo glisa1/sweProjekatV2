@@ -1,8 +1,14 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav mode="side" class="sidenav-content">
-    <button mat-button class="menuBtn">Pocetna</button>
-    <button mat-button class="menuBtn">Profil</button>
-    <button mat-button class="menuBtn">Nastava</button>
+    <button mat-button (click)="parent.changeView(0)" class="menuBtn">Pocetna</button>
+    <button mat-button (click)="parent.changeView(1)" class="menuBtn">Profil</button>
+    <button mat-button *ngIf="rangUsera==0" (click)="parent.changeView(2)" class="menuBtn">Nastava</button>
+    <button mat-button *ngIf="rangUsera!=3" (click)="parent.changeView(10)" class="menuBtn">Ocene/Izostanci</button>
+    <button mat-button *ngIf="rangUsera!=0" (click)="parent.changeView(4)" class="menuBtn">Forum</button>
+    <!--Samo admin-->
+    <button mat-button *ngIf="rangUsera==3" (click)="parent.changeView(6)" class="menuBtn">Pregled i izmena profila</button>
+    <button mat-button *ngIf="rangUsera==3" (click)="parent.changeView(7)" class="menuBtn">Dodavanje i brisanje profila</button>
+    <!--Svi-->
     <button mat-button class="menuBtn" (click)="logOut()">Odjavi se</button>
   </mat-sidenav>
 
