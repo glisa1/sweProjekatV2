@@ -15,6 +15,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
     imports: 
@@ -34,7 +37,10 @@ import { MatNativeDateModule } from '@angular/material';
         MatTableModule,
         MatChipsModule,
         MatDatepickerModule,
-        MatNativeDateModule
+        MatNativeDateModule,
+        MatStepperModule,
+        MatButtonToggleModule,
+        MatTabsModule
     ],
     exports: 
     [
@@ -53,7 +59,10 @@ import { MatNativeDateModule } from '@angular/material';
         MatTableModule,
         MatChipsModule,
         MatDatepickerModule,
-        MatNativeDateModule
+        MatNativeDateModule,
+        MatStepperModule,
+        MatButtonToggleModule,
+        MatTabsModule
     ],
 })
 export class MaterialClass { }

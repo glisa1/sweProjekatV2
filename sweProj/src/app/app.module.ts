@@ -30,6 +30,7 @@ import { NovaNapomenaProfesorComponent } from './Components/nova-napomena-profes
 import { NoviIzostanakProfesorComponent } from './Components/novi-izostanak-profesor/novi-izostanak-profesor.component';
 import { DodavanjeProfilaComponent } from './Components/dodavanje-profila/dodavanje-profila.component';
 import { PregledIzmenaBrisanjeProfilaComponent } from './Components/pregled-izmena-brisanje-profila/pregled-izmena-brisanje-profila.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { PregledIzmenaBrisanjeProfilaComponent } from './Components/pregled-izme
     BrowserModule,
     BrowserAnimationsModule,
     MaterialClass,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   entryComponents: [
     DialogThreadAnswerComponent,
