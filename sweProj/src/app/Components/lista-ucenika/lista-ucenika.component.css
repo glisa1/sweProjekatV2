@@ -21,6 +21,12 @@
     margin-top: 3%;
 }
 
+#lastBtn{
+    margin-top: 3%;
+    float: right;
+    margin-right: 20%;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }

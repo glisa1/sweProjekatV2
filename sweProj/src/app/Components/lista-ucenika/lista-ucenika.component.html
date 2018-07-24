@@ -5,3 +5,4 @@
 </div>
 <app-profesor-upis-ocene-napomene-izostanka *ngIf="showStudent"></app-profesor-upis-ocene-napomene-izostanka>
 <button *ngIf="!showStudent" id="btnBack" (click)="back()" mat-raised-button color="primary">Nazad</button>
+<button mat-raised-button *ngIf="!showStudent" id="lastBtn" (click)="izostanci()" color="primary">Upisite izostanke</button>

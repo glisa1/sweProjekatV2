@@ -12,6 +12,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material';
 
 @NgModule({
     imports: 
@@ -28,7 +31,10 @@ import { MatTableModule } from '@angular/material/table';
         MatExpansionModule,
         MatDialogModule,
         MatCardModule,
-        MatTableModule
+        MatTableModule,
+        MatChipsModule,
+        MatDatepickerModule,
+        MatNativeDateModule
     ],
     exports: 
     [
@@ -44,7 +50,10 @@ import { MatTableModule } from '@angular/material/table';
         MatExpansionModule,
         MatDialogModule,
         MatCardModule,
-        MatTableModule
+        MatTableModule,
+        MatChipsModule,
+        MatDatepickerModule,
+        MatNativeDateModule
     ],
 })
 export class MaterialClass { }

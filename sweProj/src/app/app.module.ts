@@ -25,6 +25,11 @@ import { UpisOcenaProfesorComponent } from './Components/upis-ocena-profesor/upi
 import { ListaOdeljenjaComponent } from './Components/lista-odeljenja/lista-odeljenja.component';
 import { ListaUcenikaComponent } from './Components/lista-ucenika/lista-ucenika.component';
 import { ProfesorUpisOceneNapomeneIzostankaComponent } from './Components/profesor-upis-ocene-napomene-izostanka/profesor-upis-ocene-napomene-izostanka.component';
+import { NovaOcenaProfesorComponent } from './Components/nova-ocena-profesor/nova-ocena-profesor.component';
+import { NovaNapomenaProfesorComponent } from './Components/nova-napomena-profesor/nova-napomena-profesor.component';
+import { NoviIzostanakProfesorComponent } from './Components/novi-izostanak-profesor/novi-izostanak-profesor.component';
+import { DodavanjeProfilaComponent } from './Components/dodavanje-profila/dodavanje-profila.component';
+import { PregledIzmenaBrisanjeProfilaComponent } from './Components/pregled-izmena-brisanje-profila/pregled-izmena-brisanje-profila.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +53,12 @@ import { ProfesorUpisOceneNapomeneIzostankaComponent } from './Components/profes
     UpisOcenaProfesorComponent,
     ListaOdeljenjaComponent,
     ListaUcenikaComponent,
-    ProfesorUpisOceneNapomeneIzostankaComponent
+    ProfesorUpisOceneNapomeneIzostankaComponent,
+    NovaOcenaProfesorComponent,
+    NovaNapomenaProfesorComponent,
+    NoviIzostanakProfesorComponent,
+    DodavanjeProfilaComponent,
+    PregledIzmenaBrisanjeProfilaComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +67,10 @@ import { ProfesorUpisOceneNapomeneIzostankaComponent } from './Components/profes
     FormsModule
   ],
   entryComponents: [
-    DialogThreadAnswerComponent
+    DialogThreadAnswerComponent,
+    NovaOcenaProfesorComponent,
+    NovaNapomenaProfesorComponent,
+    NoviIzostanakProfesorComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
