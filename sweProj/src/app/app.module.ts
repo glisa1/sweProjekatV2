@@ -20,7 +20,7 @@ import { PregledDeceRoditeljComponent } from './Components/pregled-dece-roditelj
 import { DetePregledComponent } from './Components/dete-pregled/dete-pregled.component';
 import { PregledOcenaComponent } from './Components/pregled-ocena/pregled-ocena.component';
 import { PregledIzostanakaComponent } from './Components/pregled-izostanaka/pregled-izostanaka.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpisOcenaProfesorComponent } from './Components/upis-ocena-profesor/upis-ocena-profesor.component';
 import { ListaOdeljenjaComponent } from './Components/lista-odeljenja/lista-odeljenja.component';
 import { ListaUcenikaComponent } from './Components/lista-ucenika/lista-ucenika.component';
@@ -30,7 +30,9 @@ import { NovaNapomenaProfesorComponent } from './Components/nova-napomena-profes
 import { NoviIzostanakProfesorComponent } from './Components/novi-izostanak-profesor/novi-izostanak-profesor.component';
 import { DodavanjeProfilaComponent } from './Components/dodavanje-profila/dodavanje-profila.component';
 import { PregledIzmenaBrisanjeProfilaComponent } from './Components/pregled-izmena-brisanje-profila/pregled-izmena-brisanje-profila.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { DijalogNoviDjakComponent } from './Components/dijalog-novi-djak/dijalog-novi-djak.component';
+import { DijalogNoviRoditeljComponent } from './Components/dijalog-novi-roditelj/dijalog-novi-roditelj.component';
+import { DijalogNoviProfesorComponent } from './Components/dijalog-novi-profesor/dijalog-novi-profesor.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     NovaNapomenaProfesorComponent,
     NoviIzostanakProfesorComponent,
     DodavanjeProfilaComponent,
-    PregledIzmenaBrisanjeProfilaComponent
+    PregledIzmenaBrisanjeProfilaComponent,
+    DijalogNoviDjakComponent,
+    DijalogNoviRoditeljComponent,
+    DijalogNoviProfesorComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +77,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     DialogThreadAnswerComponent,
     NovaOcenaProfesorComponent,
     NovaNapomenaProfesorComponent,
-    NoviIzostanakProfesorComponent
+    NoviIzostanakProfesorComponent,
+    DijalogNoviDjakComponent,
+    DijalogNoviRoditeljComponent,
+    DijalogNoviProfesorComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

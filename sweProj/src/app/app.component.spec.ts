@@ -1,4 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -6,6 +7,10 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      imports:[
+        FormsModule,
+        ReactiveFormsModule
+      ]
     }).compileComponents();
   }));
   it('should create the app', async(() => {

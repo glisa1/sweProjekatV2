@@ -18,6 +18,8 @@ import { MatNativeDateModule } from '@angular/material';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
     imports: 
@@ -40,7 +42,9 @@ import { MatTabsModule } from '@angular/material/tabs';
         MatNativeDateModule,
         MatStepperModule,
         MatButtonToggleModule,
-        MatTabsModule
+        MatTabsModule,
+        MatSlideToggleModule,
+        MatRadioModule
     ],
     exports: 
     [
@@ -62,7 +66,9 @@ import { MatTabsModule } from '@angular/material/tabs';
         MatNativeDateModule,
         MatStepperModule,
         MatButtonToggleModule,
-        MatTabsModule
+        MatTabsModule,
+        MatSlideToggleModule,
+        MatRadioModule
     ],
 })
 export class MaterialClass { }
