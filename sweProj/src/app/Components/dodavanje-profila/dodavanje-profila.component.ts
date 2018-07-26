@@ -22,12 +22,70 @@ export class DodavanjeProfilaComponent implements OnInit {
   public datRodj:Date;
   public rang;
 //----
+  public rad1:boolean=false;
+  public rad2:boolean=false;
+  public rad3:boolean=false;
+  public rad4:boolean=false;
+
+  public radioBool(arg:number){
+    if(arg===0){
+      if (this.rad1===true){
+        this.rad1 = false;
+      }
+      else{
+        this.rad2=false;
+        this.rad3=false;
+        this.rad4=false;
+        this.rad1=true;
+      }
+    }
+    else if(arg===1)
+    {
+      if (this.rad2===true){
+        this.rad2 = false;
+      }
+      else{
+        this.rad2=true;
+        this.rad3=false;
+        this.rad4=false;
+        this.rad1=false;
+      }
+    }
+    else if(arg===2){
+      if (this.rad3===true){
+        this.rad3 = false;
+      }
+      else{
+        this.rad2=false;
+        this.rad3=true;
+        this.rad4=false;
+        this.rad1=false;
+      }
+    }
+    else if(arg===3){
+      if (this.rad4===true){
+        this.rad4= false;
+      }
+      else{
+        this.rad2=false;
+        this.rad3=false;
+        this.rad4=true;
+        this.rad1=false;
+      }
+    }
+  }
 
 openDialog(): void {
-  let rol1 =document.getElementById('prvi');
-  let rol2 =document.getElementById('drugi');
-  let rol3 =document.getElementById('treci');
-  if(rol1['checked'] == true){
+  console.log("prvi:");
+  console.log(this.rad1);
+  console.log("drugi:");
+  console.log(this.rad2);
+  console.log("treci:");
+  console.log(this.rad3);
+  console.log("cetvrti:");
+  console.log(this.rad4);
+  if(this.rad1 == true){
+    console.log("uso prvi");
     const dialogRef = this.dialog.open(DijalogNoviDjakComponent, {
       width: '250px'
     });
@@ -36,7 +94,8 @@ openDialog(): void {
       console.log('The dialog was closed');
     });
   }
-  else if (rol2['checked'] == true){
+  else if (this.rad2 == true){
+    console.log("uso drugi");
     const dialogRef = this.dialog.open(DijalogNoviRoditeljComponent, {
       width: '250px'
     });
@@ -45,7 +104,8 @@ openDialog(): void {
       console.log('The dialog was closed');
     });
   }
-  else if(rol3['checked'] == true){
+  else if(this.rad3 == true){
+    console.log("uso treci");
     const dialogRef = this.dialog.open(DijalogNoviProfesorComponent, {
       width: '250px'
     });
@@ -56,13 +116,14 @@ openDialog(): void {
   }
 }
 
-  public show(){
-    console.log(this.korIme);
-    console.log(this.lozinka);
-    console.log(this.lozinka2);
-    console.log(this.ime);
-    console.log(this.prezime);
-    console.log(this.adresa);
+  public reset(){
+    this.korIme = '';
+    this.lozinka = '';
+    this.lozinka2 = '';
+    this.ime = '';
+    this.prezime = '';
+    this.adresa = '';
+    this.datRodj = null;
   }
 
   ngOnInit() {
