@@ -1,5 +1,19 @@
 <div class="mainField">
-
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let g of godine">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ g.broj }}
+            </mat-panel-title>
+            <mat-panel-description>
+              Prosirite da bi videli odeljenja
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+      
+          <div (click)="fillData(o.id)" class="selectOdeljenje" *ngFor="let o of odeljenja"> {{ o.naziv }} Broj djaka: {{ o.brdjaka }} </div>
+          </mat-expansion-panel>
+      </mat-accordion>
+      <div class="selectedOdeljenje">Izabrano odeljenje: {{ data_object['id'] }}</div>
 </div>
 <button mat-button (click)="cancel()" color="warn">Otkazi</button>
-<button mat-button color="warn">Sacuvaj</button>
+<button mat-button (click)="choose()" id="lastBtn" color="warn">Sacuvaj</button>

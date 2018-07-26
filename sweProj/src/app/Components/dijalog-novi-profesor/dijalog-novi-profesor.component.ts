@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-dijalog-novi-profesor',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DijalogNoviProfesorComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<DijalogNoviProfesorComponent>) { }
 
   ngOnInit() {
+  }
+
+  public selectedData = [];
+
+  public back(){
+    this.dialogRef.close();
+  }
+
+  public select(){
+    this.dialogRef.close(this.selectedData); //salju se podaci nazad
   }
 
 }

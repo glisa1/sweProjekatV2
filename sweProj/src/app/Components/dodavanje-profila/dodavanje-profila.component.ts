@@ -29,89 +29,70 @@ export class DodavanjeProfilaComponent implements OnInit {
 
   public radioBool(arg:number){
     if(arg===0){
-      if (this.rad1===true){
-        this.rad1 = false;
-      }
-      else{
         this.rad2=false;
         this.rad3=false;
         this.rad4=false;
         this.rad1=true;
-      }
     }
     else if(arg===1)
     {
-      if (this.rad2===true){
-        this.rad2 = false;
-      }
-      else{
         this.rad2=true;
         this.rad3=false;
         this.rad4=false;
         this.rad1=false;
-      }
     }
     else if(arg===2){
-      if (this.rad3===true){
-        this.rad3 = false;
-      }
-      else{
         this.rad2=false;
         this.rad3=true;
         this.rad4=false;
         this.rad1=false;
-      }
     }
     else if(arg===3){
-      if (this.rad4===true){
-        this.rad4= false;
-      }
-      else{
         this.rad2=false;
         this.rad3=false;
         this.rad4=true;
         this.rad1=false;
-      }
     }
   }
 
 openDialog(): void {
-  console.log("prvi:");
-  console.log(this.rad1);
-  console.log("drugi:");
-  console.log(this.rad2);
-  console.log("treci:");
-  console.log(this.rad3);
-  console.log("cetvrti:");
-  console.log(this.rad4);
   if(this.rad1 == true){
     console.log("uso prvi");
     const dialogRef = this.dialog.open(DijalogNoviDjakComponent, {
-      width: '250px'
+      width: '500px'
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
+      if(result){
+        console.log("Id izabranog odeljenja: " + result['id']);
+      }
     });
   }
   else if (this.rad2 == true){
     console.log("uso drugi");
     const dialogRef = this.dialog.open(DijalogNoviRoditeljComponent, {
-      width: '250px'
+      width: '500px'
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
+      if(result){
+        console.log("Izabrano/a dete/a: " + result);
+      }
     });
   }
   else if(this.rad3 == true){
     console.log("uso treci");
     const dialogRef = this.dialog.open(DijalogNoviProfesorComponent, {
-      width: '250px'
+      width: '500px'
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
+      if(result){
+        console.log("Izabrani id-evi: " + result);
+      }
     });
   }
 }
