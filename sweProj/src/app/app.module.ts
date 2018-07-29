@@ -33,6 +33,11 @@ import { PregledIzmenaBrisanjeProfilaComponent } from './Components/pregled-izme
 import { DijalogNoviDjakComponent } from './Components/dijalog-novi-djak/dijalog-novi-djak.component';
 import { DijalogNoviRoditeljComponent } from './Components/dijalog-novi-roditelj/dijalog-novi-roditelj.component';
 import { DijalogNoviProfesorComponent } from './Components/dijalog-novi-profesor/dijalog-novi-profesor.component';
+import { PIBProfilaComponent } from './Components/pibprofila/pibprofila.component';
+import { PIBStudentComponent } from './Components/pibstudent/pibstudent.component';
+import { PIBParentComponent } from './Components/pibparent/pibparent.component';
+import { PIBTeacherComponent } from './Components/pibteacher/pibteacher.component';
+import { PIBAdminComponent } from './Components/pibadmin/pibadmin.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +69,12 @@ import { DijalogNoviProfesorComponent } from './Components/dijalog-novi-profesor
     PregledIzmenaBrisanjeProfilaComponent,
     DijalogNoviDjakComponent,
     DijalogNoviRoditeljComponent,
-    DijalogNoviProfesorComponent
+    DijalogNoviProfesorComponent,
+    PIBProfilaComponent,
+    PIBStudentComponent,
+    PIBParentComponent,
+    PIBTeacherComponent,
+    PIBAdminComponent
   ],
   imports: [
     BrowserModule,

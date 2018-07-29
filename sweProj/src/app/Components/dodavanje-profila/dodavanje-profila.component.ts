@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { DesnaStranaComponentComponent } from '../desna-strana-component/desna-strana-component.component';
 import { MatDialog } from '@angular/material';
 import { DijalogNoviDjakComponent } from '../dijalog-novi-djak/dijalog-novi-djak.component';
 import { DijalogNoviRoditeljComponent } from '../dijalog-novi-roditelj/dijalog-novi-roditelj.component';
@@ -11,7 +12,8 @@ import { DijalogNoviProfesorComponent } from '../dijalog-novi-profesor/dijalog-n
 })
 export class DodavanjeProfilaComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,
+              @Inject(DesnaStranaComponentComponent) private parent:DesnaStranaComponentComponent) { }
 
   public korIme:string;
   public lozinka:string;
@@ -21,6 +23,7 @@ export class DodavanjeProfilaComponent implements OnInit {
   public adresa:string;
   public datRodj:Date;
   public rang;
+  public createErrorText:boolean = false;
 //----
   public rad1:boolean=false;
   public rad2:boolean=false;
@@ -53,48 +56,90 @@ export class DodavanjeProfilaComponent implements OnInit {
         this.rad4=true;
         this.rad1=false;
     }
+    this.rang = arg;
+  }
+
+  /* Proverava da li su sva polja popunjena */
+  public checkInputStatus() : boolean{
+    console.log(this.korIme);
+    console.log(this.lozinka);
+    console.log(this.lozinka2);
+    console.log(this.ime);
+    console.log(this.prezime);
+    console.log(this.adresa);
+    console.log(this.datRodj);
+    console.log(this.rang);
+    if (this.korIme!='' && this.lozinka!='' && this.lozinka2!=''
+        && this.ime!='' && this.prezime!='' && this.adresa!='' && this.datRodj!= null){
+          if (this.lozinka === this.lozinka2)
+          {
+            if(this.rad1 || this.rad2 || this.rad3 || this.rad4){
+              return true;
+            }
+            else{
+              return false;
+            }
+          }
+          else{
+            return false;
+          }
+        }
+      else{
+        return false;
+      }
   }
 
 openDialog(): void {
-  if(this.rad1 == true){
-    console.log("uso prvi");
-    const dialogRef = this.dialog.open(DijalogNoviDjakComponent, {
-      width: '500px'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      if(result){
-        console.log("Id izabranog odeljenja: " + result['id']);
-      }
-    });
+  if(!this.checkInputStatus()){
+    this.createErrorText = true;
   }
-  else if (this.rad2 == true){
-    console.log("uso drugi");
-    const dialogRef = this.dialog.open(DijalogNoviRoditeljComponent, {
-      width: '500px'
-    });
+  else{
+    if(this.rad1 == true){
+      console.log("uso prvi");
+      const dialogRef = this.dialog.open(DijalogNoviDjakComponent, {
+        width: '500px'
+      });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      if(result){
-        console.log("Izabrano/a dete/a: " + result);
-      }
-    });
-  }
-  else if(this.rad3 == true){
-    console.log("uso treci");
-    const dialogRef = this.dialog.open(DijalogNoviProfesorComponent, {
-      width: '500px',
-      height: '500px'
-    });
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        if(result){
+          console.log("Id izabranog odeljenja: " + result['id']);
+        }
+        this.parent.parent.changeView(0);
+      });
+    }
+    else if (this.rad2 == true){
+      console.log("uso drugi");
+      const dialogRef = this.dialog.open(DijalogNoviRoditeljComponent, {
+        width: '500px'
+      });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      if(result){
-        console.log("Izabrani id-evi: " + result);
-      }
-    });
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        if(result){
+          console.log("Izabrano/a dete/a: " + result);
+        }
+        this.parent.parent.changeView(0);
+      });
+    }
+    else if(this.rad3 == true){
+      console.log("uso treci");
+      const dialogRef = this.dialog.open(DijalogNoviProfesorComponent, {
+        width: '500px',
+        height: '500px'
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        if(result){
+          console.log("Izabrani id-evi: " + result);
+        }
+        this.parent.parent.changeView(0);
+      });
+    }
+    else{
+      this.parent.parent.changeView(0); //fale funkcije za upisivanje novih naloga u bazu
+    }
   }
 }
 

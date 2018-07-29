@@ -8,7 +8,7 @@ import { AppComponent } from '../../app.component';
 })
 export class DesnaStranaComponentComponent implements OnInit {
 
-  constructor(@Inject(AppComponent) private parent:AppComponent) { }
+  constructor(@Inject(AppComponent) public parent:AppComponent) { }
   public rang:number = this.parent.userRang; //koristiti za prikazivanje raznih komponenti preko ngif-a
   ngOnInit() {
   }

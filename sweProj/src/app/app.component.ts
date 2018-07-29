@@ -21,8 +21,8 @@ export class AppComponent {
     5-upis ocena
     */
     /*admin
-    6-pregled i izmena
-    7-dodavanje i brisanje
+    6-pregled i izmena, brisanje
+    7-dodavanje
   */
 
   public prevTest:number = 0;
