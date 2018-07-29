@@ -3,6 +3,10 @@ table {
     user-select: none;
 }
 
+#head{
+    text-align: center;
+}
+
 .dialogBtn{
     margin-top: 2%;
 }

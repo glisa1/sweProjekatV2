@@ -1,3 +1,4 @@
+<div id="head">Izaberite dete ili decu ovog roditelja</div>
 <mat-form-field>
   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 </mat-form-field>
@@ -6,14 +7,8 @@
 
     <!-- Checkbox Column -->
     <ng-container matColumnDef="select">
-      <!--<th mat-header-cell *matHeaderCellDef>
-        <mat-checkbox (change)="$event ? masterToggle() : null"
-                      [checked]="selection.hasValue() && isAllSelected()"
-                      [indeterminate]="selection.hasValue() && !isAllSelected()">
-        </mat-checkbox>
-      </th> -->
       <th mat-header-cell *matHeaderCellDef></th>
-      <td mat-cell *matCellDef="let row; let i = index">
+      <td mat-cell *matCellDef="let row; let i = index" (click)="getData(i)">
         <mat-checkbox (click)="$event.stopPropagation()"
                       (change)="$event ? selection.toggle(row) : null"
                       [checked]="selection.isSelected(row)"
@@ -25,19 +20,19 @@
     <!-- Ime Column -->
     <ng-container matColumnDef="ime">
       <th mat-header-cell *matHeaderCellDef> Ime </th>
-      <td mat-cell *matCellDef="let element"> {{element.ime}} </td>
+      <td mat-cell *matCellDef="let element let i = index" (click)="getData(i)"> {{element.ime}} </td>
     </ng-container>
 
     <!-- Prezime Column -->
     <ng-container matColumnDef="prezime">
       <th mat-header-cell *matHeaderCellDef> Prezime </th>
-      <td mat-cell *matCellDef="let element"> {{element.prezime }} </td>
+      <td mat-cell *matCellDef="let element let i = index" (click)="getData(i)"> {{element.prezime }} </td>
     </ng-container>
 
     <!-- Odeljenje Column -->
     <ng-container matColumnDef="odeljenje">
       <th mat-header-cell *matHeaderCellDef> Odeljenje </th>
-      <td mat-cell *matCellDef="let element"> {{element.odeljenje}} </td>
+      <td mat-cell *matCellDef="let element; let i = index" (click)="getData(i)"> {{element.odeljenje}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

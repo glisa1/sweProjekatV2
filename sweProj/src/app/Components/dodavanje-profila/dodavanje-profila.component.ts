@@ -85,7 +85,8 @@ openDialog(): void {
   else if(this.rad3 == true){
     console.log("uso treci");
     const dialogRef = this.dialog.open(DijalogNoviProfesorComponent, {
-      width: '500px'
+      width: '500px',
+      height: '500px'
     });
 
     dialogRef.afterClosed().subscribe(result => {
