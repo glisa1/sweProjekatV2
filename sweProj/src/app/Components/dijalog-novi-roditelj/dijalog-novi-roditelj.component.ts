@@ -48,10 +48,6 @@ export class DijalogNoviRoditeljComponent implements OnInit {
     return numSelected === numRows;
   }
 
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
-
   masterToggle() {
     this.isAllSelected() ?
         this.selection.clear() :

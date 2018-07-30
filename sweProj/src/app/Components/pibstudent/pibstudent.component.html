@@ -1,8 +1,4 @@
-<div class="mainField">
-  <mat-form-field>
-    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-  </mat-form-field>
-  
+<div class="mainField" *ngIf="!viewP">
   <div class="tableDiv">
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     
@@ -31,7 +27,9 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row class="hoverable" *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    <mat-paginator [pageSizeOptions]="[20]" showFirstLastButtons></mat-paginator>
   </div>
 </div>
-<button mat-raised-button id="dltBtn" disabled color="warn">Obrisi izabrane naloge</button>
+<button *ngIf="!viewP" mat-raised-button id="dltBtn" (click)="delete()" disabled color="warn">Obrisi izabrane naloge</button>
+<button *ngIf="!viewP" mat-raised-button id="backBtn" (click)="back()" color="primary">Nazad</button>
+<app-change-student-profile-admin *ngIf="viewP"></app-change-student-profile-admin>

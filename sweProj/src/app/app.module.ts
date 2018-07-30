@@ -38,6 +38,8 @@ import { PIBStudentComponent } from './Components/pibstudent/pibstudent.componen
 import { PIBParentComponent } from './Components/pibparent/pibparent.component';
 import { PIBTeacherComponent } from './Components/pibteacher/pibteacher.component';
 import { PIBAdminComponent } from './Components/pibadmin/pibadmin.component';
+import { ChangeStudentProfileAdminComponent } from './Components/change-student-profile-admin/change-student-profile-admin.component';
+import { ChangeParentProfileAdminComponent } from './Components/change-parent-profile-admin/change-parent-profile-admin.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +76,9 @@ import { PIBAdminComponent } from './Components/pibadmin/pibadmin.component';
     PIBStudentComponent,
     PIBParentComponent,
     PIBTeacherComponent,
-    PIBAdminComponent
+    PIBAdminComponent,
+    ChangeStudentProfileAdminComponent,
+    ChangeParentProfileAdminComponent
   ],
   imports: [
     BrowserModule,

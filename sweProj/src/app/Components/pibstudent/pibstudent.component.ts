@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { MatTableDataSource, MatPaginator } from '@angular/material';
+import { PIBProfilaComponent } from '../pibprofila/pibprofila.component';
 
 const ELEMENT_DATA: Object[] = [
   {id: 1, Ime: 'Ugljesa', Prezime: 'Stanisic', Odeljenje: 'II3'},
@@ -22,9 +23,11 @@ const ELEMENT_DATA: Object[] = [
 })
 export class PIBStudentComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(PIBProfilaComponent) private parent:PIBProfilaComponent) { }
 
   public checkNumbr = [];
+  public selectedStudentId:number;
+  public viewP:boolean = false;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -34,10 +37,6 @@ export class PIBStudentComponent implements OnInit {
 
   displayedColumns: string[] = ['Ime', 'Prezime', 'Odeljenje', 'check'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
-
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
 
   public empty(arg:number){
     console.log("Cheat..." + arg);
@@ -57,7 +56,19 @@ export class PIBStudentComponent implements OnInit {
   }
 
   public selectStudent(arg:number){
-    console.log(arg);
+    this.selectedStudentId = arg;
+    console.log("Izabran id djaka: " + this.selectedStudentId);
+    this.viewP = true;
+  }
+
+  public delete(){
+    /* Logika za brisanje izabranih ucenika */
+    console.log("Obrisani nalozi sa id-em: " + this.checkNumbr);
+    this.parent.notStudent();
+  }
+
+  public back(){
+    this.parent.notStudent();
   }
 
 }

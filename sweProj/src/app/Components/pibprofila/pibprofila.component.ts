@@ -30,9 +30,19 @@ export class PIBProfilaComponent implements OnInit {
     this.showS = true;
   }
 
+  public notStudent(){
+    this.show = true;
+    this.showS = false;
+  }
+
   public getParent(){
     this.show = false;
     this.showP = true;
+  }
+
+  public notParent(){
+    this.show = true;
+    this.showP = false;
   }
 
   public getTeacher(){
@@ -40,9 +50,19 @@ export class PIBProfilaComponent implements OnInit {
     this.showT = true;
   }
 
+  public notTeacher(){
+    this.show = true;
+    this.showT = false;
+  }
+
   public getAdmin(){
     this.show = false;
     this.showA = true;
+  }
+
+  public notAdmin(){
+    this.show = true;
+    this.showT = false;
   }
 
 }
