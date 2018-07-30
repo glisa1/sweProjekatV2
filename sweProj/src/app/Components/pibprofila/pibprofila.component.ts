@@ -62,7 +62,7 @@ export class PIBProfilaComponent implements OnInit {
 
   public notAdmin(){
     this.show = true;
-    this.showT = false;
+    this.showA = false;
   }
 
 }
