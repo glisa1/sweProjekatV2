@@ -42,6 +42,9 @@ import { ChangeStudentProfileAdminComponent } from './Components/change-student-
 import { ChangeParentProfileAdminComponent } from './Components/change-parent-profile-admin/change-parent-profile-admin.component';
 import { AddChildToParentAdminComponent } from './Components/add-child-to-parent-admin/add-child-to-parent-admin.component';
 import { ChangeAdminProfileAdminComponent } from './Components/change-admin-profile-admin/change-admin-profile-admin.component';
+import { ChangeTeacherProfileAdminComponent } from './Components/change-teacher-profile-admin/change-teacher-profile-admin.component';
+import { AddClassesToTeacherAdminComponent } from './Components/add-classes-to-teacher-admin/add-classes-to-teacher-admin.component';
+import { AddMainClassToTeacherAdminComponent } from './Components/add-main-class-to-teacher-admin/add-main-class-to-teacher-admin.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +85,10 @@ import { ChangeAdminProfileAdminComponent } from './Components/change-admin-prof
     ChangeStudentProfileAdminComponent,
     ChangeParentProfileAdminComponent,
     AddChildToParentAdminComponent,
-    ChangeAdminProfileAdminComponent
+    ChangeAdminProfileAdminComponent,
+    ChangeTeacherProfileAdminComponent,
+    AddClassesToTeacherAdminComponent,
+    AddMainClassToTeacherAdminComponent
   ],
   imports: [
     BrowserModule,
@@ -99,7 +105,9 @@ import { ChangeAdminProfileAdminComponent } from './Components/change-admin-prof
     DijalogNoviDjakComponent,
     DijalogNoviRoditeljComponent,
     DijalogNoviProfesorComponent,
-    AddChildToParentAdminComponent
+    AddChildToParentAdminComponent,
+    AddClassesToTeacherAdminComponent,
+    AddMainClassToTeacherAdminComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
