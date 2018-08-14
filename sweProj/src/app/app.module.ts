@@ -45,6 +45,9 @@ import { ChangeAdminProfileAdminComponent } from './Components/change-admin-prof
 import { ChangeTeacherProfileAdminComponent } from './Components/change-teacher-profile-admin/change-teacher-profile-admin.component';
 import { AddClassesToTeacherAdminComponent } from './Components/add-classes-to-teacher-admin/add-classes-to-teacher-admin.component';
 import { AddMainClassToTeacherAdminComponent } from './Components/add-main-class-to-teacher-admin/add-main-class-to-teacher-admin.component';
+import { PregledOcenaIIzostanakaUcenikComponent } from './Components/pregled-ocena-iizostanaka-ucenik/pregled-ocena-iizostanaka-ucenik.component';
+import { PregledIzostanakaNapomenaUcenikComponent } from './Components/pregled-izostanaka-napomena-ucenik/pregled-izostanaka-napomena-ucenik.component';
+import { NastavaUcenikComponent } from './Components/nastava-ucenik/nastava-ucenik.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +91,10 @@ import { AddMainClassToTeacherAdminComponent } from './Components/add-main-class
     ChangeAdminProfileAdminComponent,
     ChangeTeacherProfileAdminComponent,
     AddClassesToTeacherAdminComponent,
-    AddMainClassToTeacherAdminComponent
+    AddMainClassToTeacherAdminComponent,
+    PregledOcenaIIzostanakaUcenikComponent,
+    PregledIzostanakaNapomenaUcenikComponent,
+    NastavaUcenikComponent
   ],
   imports: [
     BrowserModule,

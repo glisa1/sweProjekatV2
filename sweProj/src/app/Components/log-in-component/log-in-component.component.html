@@ -31,5 +31,11 @@
       <mat-option value="3">Administrator</mat-option>
     </mat-select>
   </mat-form-field>
+  <div *ngIf="logInFailed" class="logInError">
+        <i class="material-icons">
+                report_problem
+                </i>
+      Morate uneti ispravne podatke!
+  </div>
   <button id="logInBtn" (click)="logInClick()" mat-raised-button color="primary">Ulogujte se</button>
 </div>

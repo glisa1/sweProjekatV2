@@ -34,3 +34,11 @@
     font-style: italic;
     color: white;
   }
+
+  .logInError{
+    color: red;
+    margin-bottom: 2%;
+    width: 100%;
+    text-align: center;
+    float: left;
+  }

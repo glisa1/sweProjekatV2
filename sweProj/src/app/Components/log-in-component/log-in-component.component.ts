@@ -13,20 +13,26 @@ export class LogInComponentComponent implements OnInit {
 
   public usrName = '';
   public paswr = '';
-
   public rang:number;
+  public logInFailed:boolean = false;
+
   ngOnInit() {
   }
 
   public logInClick(){
-    this.parent.logInTest = false; //false zato sto ce je logout postaviti na true
-    //let rol=<HTMLInputElement>document.getElementById("Role");
-    //this.parent.userRang = Number(rol.value); //radi, provereno donjim logovanjem
-    this.parent.userRang = this.rang;
-    //console.log(rol.type);
-    console.log(this.parent.userRang);
-    console.log(this.usrName);
-    console.log(this.paswr);
+    if (this.usrName === '' || this.paswr === '' || this.rang == null){
+      this.logInFailed = true;
+    }
+    else{
+      this.logInFailed = false;
+    }
+    if (this.logInFailed === false){
+      this.parent.logInTest = false;
+      this.parent.userRang = this.rang;
+      console.log(this.parent.userRang);
+      console.log(this.usrName);
+      console.log(this.paswr);
+    }
   }
 
 }

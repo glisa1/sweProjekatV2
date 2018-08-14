@@ -36,7 +36,7 @@ export class AppComponent {
       this.prevTest = 5;
       this.showTest[this.prevTest] = true;
      } 
-     else if (this.userRang==1)
+     else if (this.userRang==1 || this.userRang==0)
      {
       this.showTest[this.prevTest] = false;
       this.prevTest = 3;
