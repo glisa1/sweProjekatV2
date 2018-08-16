@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { ObavestenjeComponentComponent } from '../obavestenje-component/obavestenje-component.component';
 
 @Component({
   selector: 'app-novo-obavestenje',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovoObavestenjeComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(ObavestenjeComponentComponent) private parent:ObavestenjeComponentComponent) { }
 
   ngOnInit() {
   }

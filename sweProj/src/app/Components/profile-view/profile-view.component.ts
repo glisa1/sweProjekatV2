@@ -11,6 +11,9 @@ export class ProfileViewComponent implements OnInit {
   constructor(@Inject(DesnaStranaComponentComponent) private parent:DesnaStranaComponentComponent) { }
   public rang:number = this.parent.rang;
   public editTest:boolean = false;
+  public imeEdit = "";
+  public prezimeEdit = "";
+  public adresaEdit = "";
   public profileData = {
     "Username": "Vlaxy",
     "Ime": "Vlajko",

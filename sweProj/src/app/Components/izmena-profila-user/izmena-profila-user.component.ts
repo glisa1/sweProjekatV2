@@ -13,6 +13,11 @@ export class IzmenaProfilaUserComponent implements OnInit {
   public back(){
     this.parent.editTest = false;
   }
+
+  public backSubmit(){
+    this.parent.editTest = false;
+    console.log(this.parent.imeEdit + ' ' + this.parent.prezimeEdit + ' ' + this.parent.adresaEdit);
+  }
   ngOnInit() {
   }
 

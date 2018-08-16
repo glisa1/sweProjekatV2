@@ -11,8 +11,11 @@ export class ObavestenjeComponentComponent implements OnInit {
   constructor(@Inject(DesnaStranaComponentComponent) private parent:DesnaStranaComponentComponent) { }
   public novoObavestenjeTest:boolean = false;
   public rang:number = this.parent.rang;
+  public tema = "";
+  public textTeme = "";
   public novoObavestenje(){
     this.novoObavestenjeTest = !this.novoObavestenjeTest;
+    console.log(this.tema + "  " + this.textTeme);
   }
   public obavestenjaList = [
   {

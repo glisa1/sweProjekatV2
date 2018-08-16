@@ -19,7 +19,9 @@ export class ForumThreadViewComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      if(result){
+        console.log("Dijalog vratio: " + result);
+      }
     });
   }
 

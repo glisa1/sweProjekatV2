@@ -1,17 +1,17 @@
 <div class="fieldContainer">
   <div class="example-container">
     <mat-form-field>
-      <input matInput placeholder="Ime">
+      <input [(ngModel)]="parent.imeEdit" name="ime" matInput placeholder="Ime">
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Prezime">
+      <input [(ngModel)]="parent.prezimeEdit" name="prezime" matInput placeholder="Prezime">
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Adresa">
+      <input [(ngModel)]="parent.adresaEdit" name="adresa" matInput placeholder="Adresa">
     </mat-form-field>
   </div>
 </div>
 <div class="btnHolder">
   <button mat-raised-button color="primary" (click)="back()">Otkazi</button>
-  <button mat-raised-button class="btnChange" (click)="back()" color="primary">Izmeni</button>
+  <button mat-raised-button class="btnChange" (click)="backSubmit()" color="primary">Izmeni</button>
 </div>

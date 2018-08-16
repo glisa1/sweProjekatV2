@@ -10,12 +10,13 @@ export class DialogThreadAnswerComponent implements OnInit {
 
   constructor(public DialogRef: MatDialogRef<DialogThreadAnswerComponent>) { }
 
+  public odgovor = "";
   public cancel() {
-    this.DialogRef.close('Cancel');
+    this.DialogRef.close;
   }
 
   public answer() {
-    this.DialogRef.close('Answer');
+    this.DialogRef.close(this.odgovor);
   }
 
   ngOnInit() {

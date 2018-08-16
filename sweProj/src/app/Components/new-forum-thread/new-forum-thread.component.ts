@@ -10,12 +10,16 @@ export class NewForumThreadComponent implements OnInit {
 
   constructor(@Inject(ForumComponent) private parent:ForumComponent) { }
 
+  public tema = "";
+  public textTeme = "";
+
   public back() {
     this.parent.showForum = 0;
   }
 
   public post() {
     this.parent.showForum = 0; //implementirati metodu za cuvanje nove teme na forumu
+    console.log(this.tema + "  " + this.textTeme);
   }
 
   ngOnInit() {
